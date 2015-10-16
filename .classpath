@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/Users/lch735/Desktop/Ravi/project_work/Java_Cucumber/jars/selenium-server-standalone-2.47.1.jar"/>
+	<classpathentry kind="lib" path="/Users/lch735/Desktop/Ravi/project_work/Java_Cucumber/jars/hamcrest-all-1.3.jar"/>
+	<classpathentry kind="lib" path="/Users/lch735/Desktop/Ravi/project_work/Java_Cucumber/jars/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="/Users/lch735/Desktop/Ravi/project_work/Java_Cucumber/jars/gherkin-2.12.2.jar"/>
+	<classpathentry kind="lib" path="/Users/lch735/Desktop/Ravi/project_work/Java_Cucumber/jars/cucumber-jvm-deps-1.0.5.jar"/>
+	<classpathentry kind="lib" path="/Users/lch735/Desktop/Ravi/project_work/Java_Cucumber/jars/cucumber-junit-1.2.3.jar"/>
+	<classpathentry kind="lib" path="/Users/lch735/Desktop/Ravi/project_work/Java_Cucumber/jars/cucumber-java-1.2.3.jar"/>
+	<classpathentry kind="lib" path="/Users/lch735/Desktop/Ravi/project_work/Java_Cucumber/jars/cucumber-html-0.2.3.jar"/>
+	<classpathentry kind="lib" path="/Users/lch735/Desktop/Ravi/project_work/Java_Cucumber/jars/cucumber-core-1.2.3.jar"/>
+	<classpathentry kind="lib" path="/Users/lch735/Desktop/Ravi/project_work/Java_Cucumber/jars/cucumber-java-1.1.3.jar"/>
+	<classpathentry kind="lib" path="/Users/lch735/Desktop/Ravi/project_work/Selenium_Java/core_framework/bin/com/javawebdriver/jarfiles/log4j-1.2.17.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JRE-1.1"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

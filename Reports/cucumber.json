@@ -1,0 +1,70 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Invalid fb1 login",
+        "description": "",
+        "id": "fb1-login-scripts;invalid-fb1-login",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5391808608,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "i log into the fb",
+            "match": {
+              "location": "Com_Steps.login()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 18512,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify the invalid login page",
+            "match": {
+              "location": "Com_Steps.verify_invlid_login_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1238883,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "application \"Logs in\" successfully",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Logs in",
+                  "offset": 13
+                }
+              ],
+              "location": "Com_Steps.application_successfully(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@smoke"
+          }
+        ]
+      }
+    ],
+    "name": "fb1 Login scripts",
+    "description": "",
+    "id": "fb1-login-scripts",
+    "keyword": "Feature",
+    "uri": "fbLogin.feature"
+  }
+]
