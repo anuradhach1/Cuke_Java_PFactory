@@ -1,56 +1,56 @@
-package com.base;
-
-import java.io.FileInputStream;
-import java.util.Properties;
-
-import org.openqa.selenium.WebDriver;
-
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
-
-
-public class Page {
-	
-	public WebDriver driver = null;
-	protected Properties CONFIG = null;
-	
-	public WebDriver initiatePage(){
-		
-		if(driver==null){
-			
-			// initialize the properties file
-			CONFIG = new Properties();
-			String configPath = System.getProperty("user.dir") + "/src/com/pom/fb/Utils/config.properties";
-			try {
-				System.out.println("Initiating the CONFIG");
-				FileInputStream fsconfig = new FileInputStream(configPath);
-				CONFIG.load(fsconfig);
-				} catch(Exception e){
-					System.out.println("Error loading the config.properties file");
-				}
-			
-			// Initializing the WebDriver
-			String configBrowser = CONFIG.getProperty("browser");
-			
-			if(configBrowser.equals("firefox")){
-				System.out.println("Initiating the WebDrver for Firefox browser");
-				driver = new FirefoxDriver();
-				driver.manage().window().maximize();
-				
-				}
-			else if(configBrowser.equals("chrome")){
-				System.out.println("Initiating the WebDrver for chrome browser");
-				String chromeDriverPath = System.getProperty("user.dir") + "/driverexes/chromedriver";
-				System.setProperty("webdriver.chrome.driver", chromeDriverPath);
-				driver = new ChromeDriver();
-				driver.manage().window().maximize();
-			}		
-		}
-		return driver;	
-	}	
-	
-}
+//package com.base;
+//
+//import java.io.FileInputStream;
+//import java.util.Properties;
+//
+//import org.openqa.selenium.WebDriver;
+//
+//import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
+//
+//
+//
+//public class Page {
+//	
+//	public WebDriver driver = null;
+//	protected Properties CONFIG = null;
+//	
+//	public WebDriver initiatePage(){
+//		
+//		if(driver==null){
+//			
+//			// initialize the properties file
+//			CONFIG = new Properties();
+//			String configPath = System.getProperty("user.dir") + "/src/com/pom/fb/Utils/config.properties";
+//			try {
+//				System.out.println("Initiating the CONFIG");
+//				FileInputStream fsconfig = new FileInputStream(configPath);
+//				CONFIG.load(fsconfig);
+//				} catch(Exception e){
+//					System.out.println("Error loading the config.properties file");
+//				}
+//			
+//			// Initializing the WebDriver
+//			String configBrowser = CONFIG.getProperty("browser");
+//			
+//			if(configBrowser.equals("firefox")){
+//				System.out.println("Initiating the WebDrver for Firefox browser");
+//				driver = new FirefoxDriver();
+//				driver.manage().window().maximize();
+//				
+//				}
+//			else if(configBrowser.equals("chrome")){
+//				System.out.println("Initiating the WebDrver for chrome browser");
+//				String chromeDriverPath = System.getProperty("user.dir") + "/driverexes/chromedriver";
+//				System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+//				driver = new ChromeDriver();
+//				driver.manage().window().maximize();
+//			}		
+//		}
+//		return driver;	
+//	}	
+//	
+//}
 
 
 

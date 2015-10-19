@@ -19,7 +19,6 @@ public class Loginpage
 	
 	public Loginpage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
-		
 	}
 	
 	@FindBy(xpath="//*[@id='email']") 
@@ -28,7 +27,7 @@ public class Loginpage
 	@FindBy(xpath="//*[@id='pass']") 
 	private WebElement password_Edit;
 	
-	@FindBy(xpath="//input[@value='Log In']") 
+	@FindBy(xpath="//input[@value='Log In1']") 
 	private WebElement login_button;
 
 	public LandingPage doLogin(String userName, String password){
@@ -37,43 +36,45 @@ public class Loginpage
 		login_button.click();
 		return new LandingPage(driver);
 	}
-//	
-//	
-//	public static Loginpage setUp(WebDriver driver){
-//		if(driver==null){
-//			
-//			// initialize the properties file
-//			CONFIG = new Properties();
-//			String configPath = System.getProperty("user.dir") + "/src/com/pom/fb/Utils/config.properties";
-//			try {
-//				System.out.println("Initiating the CONFIG");
-//				FileInputStream fsconfig = new FileInputStream(configPath);
-//				CONFIG.load(fsconfig);
-//				} catch(Exception e){
-//					System.out.println("Error loading the config.properties file");
-//				}
-//			
-//			// Initializing the WebDriver
-//			String configBrowser = CONFIG.getProperty("browser");
-//			
-//			if(configBrowser.equals("firefox")){
-//				System.out.println("Initiating the WebDrver for Firefox browser");
-//				driver = new FirefoxDriver();
-//				driver.manage().window().maximize();
-//				
-//				}
-//			else if(configBrowser.equals("chrome")){
-//				System.out.println("Initiating the WebDrver for chrome browser");
-//				String chromeDriverPath = System.getProperty("user.dir") + "/driverexes/chromedriver";
-//				System.setProperty("webdriver.chrome.driver", chromeDriverPath);
-//				driver = new ChromeDriver();
-//				driver.manage().window().maximize();
-//			}		
-//		}
-//		
-//
-//		driver.get(CONFIG.getProperty("test_url"));
-//		System.out.println("Window Title: " + driver.getTitle());
-//		return new Loginpage(driver);
-//	}
+	
+	
+	public static Loginpage setUp(WebDriver driver){
+		if(driver==null){
+		driver.get(CONFIG.getProperty("test_url"));
+		System.out.println("Window Title: " + driver.getTitle());	
+		}
+		return new Loginpage(driver);
+	}
 }
+
+
+
+//initialize the properties file
+//CONFIG = new Properties();
+//String configPath = System.getProperty("user.dir") + "/src/com/pom/fb/Utils/config.properties";
+//try {
+//	System.out.println("Initiating the CONFIG");
+//	FileInputStream fsconfig = new FileInputStream(configPath);
+//	CONFIG.load(fsconfig);
+//	} catch(Exception e){
+//		System.out.println("Error loading the config.properties file");
+//	}
+//
+//// Initializing the WebDriver
+//String configBrowser = CONFIG.getProperty("browser");
+//
+//if(configBrowser.equals("firefox")){
+//	System.out.println("Initiating the WebDrver for Firefox browser");
+//	driver = new FirefoxDriver();
+//	driver.manage().window().maximize();
+//	
+//	}
+//else if(configBrowser.equals("chrome")){
+//	System.out.println("Initiating the WebDrver for chrome browser");
+//	String chromeDriverPath = System.getProperty("user.dir") + "/driverexes/chromedriver";
+//	System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+//	driver = new ChromeDriver();
+//	driver.manage().window().maximize();
+//}		
+//}
+//

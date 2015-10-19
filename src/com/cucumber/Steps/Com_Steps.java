@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 
 import com.pages.inbox.LandingPage;
 import com.pages.login.Loginpage;
-import com.pom.fb.Utils.HooksTask;
 
 import cucumber.api.java.en.*;
 
@@ -14,17 +13,13 @@ public class Com_Steps {
 	public Loginpage onLoginPage ;
 	protected LandingPage onLandingPage;
 	
-//	public Com_Steps(){
-//		System.out.println("Hooks driver::  " + HooksTask.driver);
-//		driver = HooksTask.driver;
-//		System.out.println("dirver value : ;;; "  + driver);
-//		
-//	}
+	public Com_Steps(){
+		driver = Hooks.driver;
+	}
 	 
 	@Given("^i log into the fb$")
 	public void login(){
-//		onLoginPage = Loginpage.setUp(driver);
-		onLoginPage = HooksTask.setupDriver();
+		onLoginPage = Loginpage.setUp(driver);
 		onLandingPage = onLoginPage.doLogin("username", "password");
 	}
 	
